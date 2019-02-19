@@ -25,7 +25,7 @@ SELECT @@SERVERNAME
 exec master..xp_cmdshell 'bcp "[WideWorldImporters].Purchasing.Suppliers" out  "C:\SQL WWI\Suppliers.txt" -T -w -t, -S'
 
 BULK INSERT [WideWorldImporters].[Purchasing].[Suppliers]
-				   FROM "C:\SQL WWI\InvoiceLines.txt"
+				   FROM "C:\SQL WWI\Suppliers.txt"
 				   WITH 
 					 (
 						BATCHSIZE = 1000, 
